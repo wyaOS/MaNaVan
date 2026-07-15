@@ -23,7 +23,7 @@ export function SiteFooter() {
         </div>
 
         <div>
-          <div className="mb-4 text-xs font-bold uppercase tracking-widest text-terracotta">
+          <div className="mb-4 text-xs font-bold uppercase tracking-widest text-cream">
             Visit
           </div>
           <address className="not-italic text-sm leading-relaxed text-cream/80">
@@ -34,7 +34,7 @@ export function SiteFooter() {
         </div>
 
         <div>
-          <div className="mb-4 text-xs font-bold uppercase tracking-widest text-terracotta">
+          <div className="mb-4 text-xs font-bold uppercase tracking-widest text-cream">
             Contact
           </div>
           <div className="space-y-2 text-sm">
@@ -44,7 +44,7 @@ export function SiteFooter() {
             <a href={`mailto:${site.email}`} className="block break-all text-cream/80 hover:text-cream">
               {site.email}
             </a>
-            <Link to="/contact" className="mt-3 inline-block text-terracotta hover:underline">
+            <Link to="/contact" className="mt-3 inline-block text-cream hover:underline">
               Send an inquiry →
             </Link>
           </div>
