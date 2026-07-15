@@ -68,8 +68,7 @@ export function SiteHeader() {
                 key={n.to}
                 to={n.to}
                 onClick={() => setOpen(false)}
-                className="py-2 text-base font-medium text-terracotta"
-                activeProps={{ className: "text-forest" }}
+                className="py-2 text-base font-medium text-terracotta data-[status=active]:text-forest"
               >
                 {n.label}
               </Link>
