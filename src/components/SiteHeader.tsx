@@ -26,8 +26,7 @@ export function SiteHeader() {
             <Link
               key={n.to}
               to={n.to}
-              className="text-terracotta transition-opacity hover:opacity-75"
-              activeProps={{ className: "text-forest" }}
+              className="text-terracotta transition-opacity hover:opacity-75 data-[status=active]:text-forest"
             >
               {n.label}
             </Link>
