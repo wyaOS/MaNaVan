@@ -16,7 +16,7 @@ export function SiteHeader() {
     <header className="sticky top-0 z-40 border-b border-border/60 bg-cream/85 backdrop-blur-md">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
         <Link to="/" className="flex items-baseline gap-2" onClick={() => setOpen(false)}>
-          <span className="text-lg font-bold uppercase tracking-tight text-sea">Ma Na Van</span>
+          <span className="text-lg font-bold uppercase tracking-tight text-terracotta">Ma Na Van</span>
           <span className="text-xs uppercase tracking-[0.2em] text-forest/60">Tours</span>
         </Link>
 
@@ -25,8 +25,8 @@ export function SiteHeader() {
             <Link
               key={n.to}
               to={n.to}
-              className="text-forest/75 transition-colors hover:text-terracotta"
-              activeProps={{ className: "text-terracotta" }}
+              className="text-terracotta transition-opacity hover:opacity-75"
+              activeProps={{ className: "opacity-75" }}
             >
               {n.label}
             </Link>
@@ -52,8 +52,8 @@ export function SiteHeader() {
                 key={n.to}
                 to={n.to}
                 onClick={() => setOpen(false)}
-                className="py-2 text-base font-medium text-forest/80"
-                activeProps={{ className: "text-terracotta" }}
+                className="py-2 text-base font-medium text-terracotta"
+                activeProps={{ className: "opacity-75" }}
               >
                 {n.label}
               </Link>
