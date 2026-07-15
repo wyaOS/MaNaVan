@@ -75,25 +75,28 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Ma Na Van Tours — Batumi, Adjara & Georgia Local Guides" },
+      { title: "Ma Na Van Tours — See Georgia Like a Local | Batumi" },
       {
         name: "description",
         content:
-          "Local tour operator in Batumi, Georgia. City tours, Adjara mountain hikes, wine & cooking home visits, ATV adventures, and airport transfers. Message us on WhatsApp.",
+          "Local tour operator in Batumi. City tours across Batumi, Tbilisi & Kutaisi, Adjara mountain hiking, wine & cooking home visits, ATV and airport transfers.",
       },
       { name: "author", content: "Ma Na Van Tours" },
-      { property: "og:title", content: "Ma Na Van Tours — See Georgia Like a Local" },
+      { property: "og:title", content: "Ma Na Van Tours — See Georgia Like a Local | Batumi" },
       {
         property: "og:description",
         content:
-          "Private and group tours across Batumi, Tbilisi & Kutaisi — city sightseeing, mountain hikes, wine tastings and more.",
+          "Local tour operator in Batumi. City tours across Batumi, Tbilisi & Kutaisi, Adjara mountain hiking, wine & cooking home visits, ATV and airport transfers.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Ma Na Van Tours — See Georgia Like a Local | Batumi" },
+      { name: "twitter:description", content: "Local tour operator in Batumi. City tours across Batumi, Tbilisi & Kutaisi, Adjara mountain hiking, wine & cooking home visits, ATV and airport transfers." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/41a4ecb8-cb64-4127-af1b-700c6cbc9a26/id-preview-d15d7b63--82f0cbcf-2c98-4c2e-a91b-bc54d650706d.lovable.app-1784150846231.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/41a4ecb8-cb64-4127-af1b-700c6cbc9a26/id-preview-d15d7b63--82f0cbcf-2c98-4c2e-a91b-bc54d650706d.lovable.app-1784150846231.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
-      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "" },
       {

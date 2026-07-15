@@ -14,8 +14,8 @@ export const Route = createFileRoute("/")({
         content:
           "Local tour operator in Batumi. City tours across Batumi, Tbilisi & Kutaisi, Adjara mountain hiking, wine & cooking home visits, ATV and airport transfers.",
       },
-      { property: "og:title", content: "Ma Na Van Tours — See Georgia Like a Local" },
-      { property: "og:description", content: "Private and group tours across Batumi, Tbilisi & Kutaisi." },
+      { property: "og:title", content: "Ma Na Van Tours — See Georgia Like a Local | Batumi" },
+      { property: "og:description", content: "Local tour operator in Batumi. City tours across Batumi, Tbilisi & Kutaisi, Adjara mountain hiking, wine & cooking home visits, ATV and airport transfers." },
     ],
   }),
   component: HomePage,
