@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
+import { cn } from "@/lib/utils";
 
 const nav = [
   { to: "/", label: "Home" },
@@ -26,7 +27,7 @@ export function SiteHeader() {
               key={n.to}
               to={n.to}
               className="text-terracotta transition-opacity hover:opacity-75"
-              activeProps={{ className: "opacity-75" }}
+              activeProps={{ className: "text-forest" }}
             >
               {n.label}
             </Link>
@@ -34,18 +35,34 @@ export function SiteHeader() {
         </nav>
 
         <button
-          className="md:hidden"
+          className="relative h-6 w-6 md:hidden"
           aria-label="Toggle menu"
+          aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
         >
-          <div className="mb-1.5 h-0.5 w-6 bg-forest" />
-          <div className="mb-1.5 h-0.5 w-6 bg-forest" />
-          <div className="h-0.5 w-6 bg-forest" />
+          <span
+            className={cn(
+              "absolute left-0 top-1/2 h-0.5 w-6 -translate-y-2 bg-forest transition-transform duration-300",
+              open && "translate-y-0 rotate-45"
+            )}
+          />
+          <span
+            className={cn(
+              "absolute left-0 top-1/2 h-0.5 w-6 bg-forest transition-opacity duration-300",
+              open && "opacity-0"
+            )}
+          />
+          <span
+            className={cn(
+              "absolute left-0 top-1/2 h-0.5 w-6 translate-y-2 bg-forest transition-transform duration-300",
+              open && "translate-y-0 -rotate-45"
+            )}
+          />
         </button>
       </div>
 
       {open && (
-        <nav className="border-t border-border/60 bg-cream md:hidden">
+        <nav className="animate-fade-in border-t border-border/60 bg-cream md:hidden">
           <div className="mx-auto flex max-w-6xl flex-col px-5 py-3">
             {nav.map((n) => (
               <Link
@@ -53,7 +70,7 @@ export function SiteHeader() {
                 to={n.to}
                 onClick={() => setOpen(false)}
                 className="py-2 text-base font-medium text-terracotta"
-                activeProps={{ className: "opacity-75" }}
+                activeProps={{ className: "text-forest" }}
               >
                 {n.label}
               </Link>
