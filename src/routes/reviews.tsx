@@ -42,7 +42,7 @@ function ReviewsPage() {
             stat: "100% recommend",
             copy: "62 verified reviews across city sightseeing, ATV, hiking and cultural tours.",
             href: site.tripadvisor,
-            color: "bg-sea",
+            color: "bg-terracotta",
           },
           {
             name: "Facebook",
@@ -56,7 +56,7 @@ function ReviewsPage() {
             stat: "2,000+ followers",
             copy: "Daily stories from the mountains, kitchens and coastlines of Georgia.",
             href: site.instagram,
-            color: "bg-forest",
+            color: "bg-terracotta",
           },
         ].map((c) => (
           <a
@@ -70,7 +70,7 @@ function ReviewsPage() {
             <h2 className="text-xl font-bold text-forest">{c.name}</h2>
             <p className="mt-1 text-sm font-semibold text-terracotta">{c.stat}</p>
             <p className="mt-3 flex-1 text-sm text-muted-foreground">{c.copy}</p>
-            <span className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-sea group-hover:gap-3">
+            <span className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-terracotta group-hover:gap-3">
               Read reviews →
             </span>
           </a>
