@@ -133,7 +133,7 @@ function HomePage() {
       </section>
 
       {/* Why us */}
-      <section className="bg-terracotta text-cream">
+      <section className="bg-forest text-cream">
         <div className="mx-auto max-w-6xl px-5 py-20">
           <h2 className="mb-12 max-w-2xl text-3xl font-bold md:text-4xl">
             Why book with Ma Na Van?
