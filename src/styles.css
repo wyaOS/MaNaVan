@@ -52,15 +52,15 @@
 :root {
   --radius: 0.75rem;
 
-  /* Brand palette: blue / white / pink / green */
+  /* Brand palette: blue / white / pink / deep forest green */
   --cream: #FFFFFF;
-  --forest: #2FBF71;
-  --forest-deep: #1f9d5a;
+  --forest: #214E34;
+  --forest-deep: #1a3d29;
   --sea: #5C95FF;
   --sea-deep: #3a78e6;
   --terracotta: #FE5BAC;
   --terracotta-deep: #e63f92;
-  --whatsapp: #2FBF71;
+  --whatsapp: #214E34;
 
   --background: var(--cream);
   --foreground: var(--forest-deep);
