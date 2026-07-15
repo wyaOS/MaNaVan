@@ -50,7 +50,7 @@ function HomePage() {
               href={whatsappMessage("Hi! I'd like to ask about your tours.")}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-full bg-terracotta px-7 py-3.5 text-base font-semibold text-cream shadow-lg transition-colors hover:bg-terracotta-deep"
+              className="inline-flex items-center justify-center rounded-full border border-terracotta bg-cream px-7 py-3.5 text-base font-semibold text-terracotta shadow-lg transition-colors hover:bg-terracotta hover:text-cream"
             >
               Message us on WhatsApp
             </a>
@@ -86,7 +86,7 @@ function HomePage() {
         <div className="mx-auto max-w-6xl px-5 py-20">
           <div className="mb-12 flex items-end justify-between gap-6">
             <div>
-              <span className="text-xs font-bold uppercase tracking-[0.3em] text-sea">
+              <span className="text-xs font-bold uppercase tracking-[0.3em] text-terracotta">
                 What we do
               </span>
               <h2 className="mt-2 text-3xl font-bold text-forest md:text-4xl">
@@ -115,13 +115,13 @@ function HomePage() {
                   />
                 </div>
                 <div className="flex flex-1 flex-col p-6">
-                  <h3 className="text-lg font-bold leading-snug text-forest">{t.title}</h3>
+                  <h3 className="text-lg font-bold leading-snug text-terracotta">{t.title}</h3>
                   <p className="mt-2 flex-1 text-sm text-muted-foreground">{t.short}</p>
                   <a
                     href={whatsappMessage(`Hi! I'd like to know more about the ${t.title}.`)}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-5 inline-flex items-center gap-2 text-sm font-bold text-sea transition-all group-hover:gap-3"
+                    className="mt-5 inline-flex items-center gap-2 text-sm font-bold text-terracotta transition-all group-hover:gap-3"
                   >
                     Send inquiry →
                   </a>
@@ -156,7 +156,7 @@ function HomePage() {
 
       {/* CTA */}
       <section className="mx-auto max-w-4xl px-5 py-20 text-center">
-        <h2 className="text-3xl font-bold text-forest md:text-4xl">
+        <h2 className="text-3xl font-bold text-terracotta md:text-4xl">
           Plan your Georgia trip with a local
         </h2>
         <p className="mt-4 text-lg text-muted-foreground">
@@ -167,7 +167,7 @@ function HomePage() {
             href={whatsappMessage("Hi! I'd like help planning a trip.")}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center rounded-full bg-terracotta px-7 py-3.5 text-base font-semibold text-cream hover:bg-terracotta-deep"
+            className="inline-flex items-center justify-center rounded-full border border-terracotta bg-cream px-7 py-3.5 text-base font-semibold text-terracotta hover:bg-terracotta hover:text-cream"
           >
             WhatsApp {site.phone}
           </a>
