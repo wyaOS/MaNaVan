@@ -9,7 +9,6 @@ import dance from "@/assets/gallery-dance.jpg";
 import city from "@/assets/tour-city.jpg";
 import group from "@/assets/tour-group.jpg";
 import priv from "@/assets/tour-private.jpg";
-import { useT } from "@/lib/i18n";
 
 export const Route = createFileRoute("/gallery")({
   head: () => ({
@@ -40,25 +39,25 @@ const photos = [
 ];
 
 function GalleryPage() {
-  const { t } = useT();
   return (
     <SiteLayout>
       <section className="mx-auto max-w-6xl px-5 py-16">
         <span className="text-xs font-bold uppercase tracking-[0.3em] text-terracotta">
-          {t("gallery.kicker")}
+          Gallery
         </span>
         <h1 className="mt-3 max-w-2xl text-4xl font-bold text-forest md:text-5xl">
-          {t("gallery.title")}
+          Moments from the road
         </h1>
         <p className="mt-4 max-w-2xl text-lg text-muted-foreground">
-          {t("gallery.body")}{" "}
+          A glimpse of what a day out with Ma Na Van looks like. More photos of real
+          trips live on our{" "}
           <a
             href="https://instagram.com/manavantours"
             target="_blank"
             rel="noopener noreferrer"
             className="font-semibold text-sea underline underline-offset-4"
           >
-            {t("gallery.instagram")}
+            Instagram
           </a>
           .
         </p>

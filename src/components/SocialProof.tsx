@@ -1,12 +1,9 @@
-import { useT } from "@/lib/i18n";
-
 export function SocialProof() {
-  const { t } = useT();
   const items = [
-    { value: t("social.1.v"), label: t("social.1.l") },
-    { value: t("social.2.v"), label: t("social.2.l") },
-    { value: t("social.3.v"), label: t("social.3.l") },
-    { value: t("social.4.v"), label: t("social.4.l") },
+    { value: "100%", label: "Recommendation rate" },
+    { value: "62+", label: "Verified reviews" },
+    { value: "4,200+", label: "Facebook community" },
+    { value: "2,000+", label: "On Instagram" },
   ];
   return (
     <section className="bg-forest text-cream">
