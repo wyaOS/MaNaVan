@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { SiteLayout } from "@/components/SiteLayout";
 import { site, whatsappMessage } from "@/lib/site";
+import { useT } from "@/lib/i18n";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -20,6 +21,7 @@ export const Route = createFileRoute("/contact")({
 });
 
 function ContactPage() {
+  const { t } = useT();
   const [sent, setSent] = useState(false);
 
   function onSubmit(e: React.FormEvent<HTMLFormElement>) {
@@ -28,7 +30,7 @@ function ContactPage() {
     const name = String(form.get("name") || "");
     const message = String(form.get("message") || "");
     const dates = String(form.get("dates") || "");
-    const text = `Hi Ma Na Van! I'm ${name}.\n\nDates: ${dates}\n\n${message}`;
+    const text = t("contact.form.greeting", { name, dates, message });
     window.open(whatsappMessage(text), "_blank");
     setSent(true);
   }
@@ -37,19 +39,15 @@ function ContactPage() {
     <SiteLayout>
       <section className="mx-auto max-w-6xl px-5 py-16">
         <span className="text-xs font-bold uppercase tracking-[0.3em] text-terracotta">
-          Contact
+          {t("contact.kicker")}
         </span>
         <h1 className="mt-3 max-w-2xl text-4xl font-bold text-forest md:text-5xl">
-          Let's plan your Georgia trip
+          {t("contact.title")}
         </h1>
-        <p className="mt-4 max-w-xl text-lg text-muted-foreground">
-          The fastest way to reach us is WhatsApp. We're online daily from 08:00 to 23:00
-          and usually reply within minutes.
-        </p>
+        <p className="mt-4 max-w-xl text-lg text-muted-foreground">{t("contact.subtitle")}</p>
       </section>
 
       <section className="mx-auto grid max-w-6xl gap-12 px-5 pb-20 md:grid-cols-2">
-        {/* Contact info */}
         <div className="space-y-6">
           <a
             href={site.whatsappHref}
@@ -59,7 +57,7 @@ function ContactPage() {
           >
             <div>
               <div className="text-xs font-bold uppercase tracking-widest text-cream/80">
-                WhatsApp
+                {t("contact.whatsapp")}
               </div>
               <div className="mt-1 text-lg font-bold">{site.phone}</div>
             </div>
@@ -72,7 +70,7 @@ function ContactPage() {
           >
             <div>
               <div className="text-xs font-bold uppercase tracking-widest text-terracotta">
-                Call
+                {t("contact.call")}
               </div>
               <div className="mt-1 text-lg font-bold text-forest">{site.phone}</div>
             </div>
@@ -85,7 +83,7 @@ function ContactPage() {
           >
             <div>
               <div className="text-xs font-bold uppercase tracking-widest text-sea">
-                Email
+                {t("contact.email")}
               </div>
               <div className="mt-1 break-all text-lg font-bold text-forest">
                 {site.email}
@@ -96,7 +94,7 @@ function ContactPage() {
 
           <div className="rounded-2xl bg-cream px-6 py-5 ring-1 ring-border/60">
             <div className="text-xs font-bold uppercase tracking-widest text-forest/60">
-              Visit us
+              {t("contact.visit")}
             </div>
             <address className="mt-1 not-italic text-lg font-semibold text-forest">
               {site.address}
@@ -117,56 +115,51 @@ function ContactPage() {
           </div>
         </div>
 
-        {/* Inquiry form */}
         <div className="rounded-2xl bg-forest p-8 text-cream md:p-10">
-          <h2 className="text-2xl font-bold">Send an inquiry</h2>
-          <p className="mt-2 text-cream/70">
-            Fill this in and we'll open WhatsApp with your message ready to send.
-          </p>
+          <h2 className="text-2xl font-bold">{t("contact.form.title")}</h2>
+          <p className="mt-2 text-cream/70">{t("contact.form.body")}</p>
           <form onSubmit={onSubmit} className="mt-6 space-y-4">
             <label className="block">
               <span className="text-xs font-bold uppercase tracking-widest text-cream/70">
-                Your name
+                {t("contact.form.name")}
               </span>
               <input
                 name="name"
                 required
                 className="mt-2 w-full rounded-lg border border-cream/20 bg-cream/10 px-4 py-3 text-cream placeholder-cream/40 focus:border-terracotta focus:outline-none"
-                placeholder="Nino"
+                placeholder={t("contact.form.namePh")}
               />
             </label>
             <label className="block">
               <span className="text-xs font-bold uppercase tracking-widest text-cream/70">
-                Dates
+                {t("contact.form.dates")}
               </span>
               <input
                 name="dates"
                 className="mt-2 w-full rounded-lg border border-cream/20 bg-cream/10 px-4 py-3 text-cream placeholder-cream/40 focus:border-terracotta focus:outline-none"
-                placeholder="e.g. 12–15 August"
+                placeholder={t("contact.form.datesPh")}
               />
             </label>
             <label className="block">
               <span className="text-xs font-bold uppercase tracking-widest text-cream/70">
-                What you're looking for
+                {t("contact.form.msg")}
               </span>
               <textarea
                 name="message"
                 required
                 rows={4}
                 className="mt-2 w-full rounded-lg border border-cream/20 bg-cream/10 px-4 py-3 text-cream placeholder-cream/40 focus:border-terracotta focus:outline-none"
-                placeholder="Two of us, love hiking and food, thinking about a home visit and a day in the mountains…"
+                placeholder={t("contact.form.msgPh")}
               />
             </label>
             <button
               type="submit"
               className="w-full rounded-full bg-terracotta px-6 py-3.5 text-base font-bold text-cream hover:bg-terracotta-deep"
             >
-              Open in WhatsApp
+              {t("contact.form.submit")}
             </button>
             {sent && (
-              <p className="text-sm text-cream/70">
-                Opened WhatsApp in a new tab — if nothing happened, please message us directly.
-              </p>
+              <p className="text-sm text-cream/70">{t("contact.form.sent")}</p>
             )}
           </form>
         </div>
